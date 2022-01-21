@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
     
     let planetSelected = pickPlanet(listedPlanets)
     addDestinationInfo(
-      window.document,
+      document,
       planetSelected.name,
       planetSelected.diameter,
       planetSelected.star,
@@ -27,8 +27,9 @@ window.addEventListener("load", function () {
       let copilotNameInput = document.querySelector ("input[name=copilotName]").value;
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]").value;
       let cargoMassInput = document.querySelector("input[name=cargoMass]").value;
-      let faultyItems = document.querySelector("#faultyItems");
+      let items = document.querySelector("#faultyItems");
+      items.style.visibility = "hidden";
       event.preventDefault();
-      formSubmission(document,faultyItems,pilotNameInput,copilotNameInput,fuelLevelInput,cargoMassInput);
+      formSubmission(document,items,pilotNameInput,copilotNameInput,fuelLevelInput,cargoMassInput);
     });
   });
