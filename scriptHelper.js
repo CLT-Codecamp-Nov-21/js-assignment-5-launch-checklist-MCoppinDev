@@ -24,8 +24,10 @@ function validateInput(testInput) {
     return "Empty";
   } else if (isNaN(Number(testInput))) {
     return "Not a Number";
+  } else {
+    return "Is a Number";
   }
-  return "Is a Number";
+
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
@@ -35,7 +37,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
   let fuelStatus = document.getElementById("fuelStatus");
   let cargoStatus = document.getElementById("cargoStatus");
   let launchStatus = document.getElementById("launchStatus");
-   list.style.visibility = "hidden";
 
   if (
     validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {

@@ -21,14 +21,14 @@ window.addEventListener("load", function () {
   
 
   const form = document.querySelector("form");
-
+  let items = document.querySelector("#faultyItems");
+  items.style.visibility = "hidden";
+  
     form.addEventListener("submit", function (event) {
       let pilotNameInput = document.querySelector("input[name=pilotName]").value;
       let copilotNameInput = document.querySelector ("input[name=copilotName]").value;
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]").value;
       let cargoMassInput = document.querySelector("input[name=cargoMass]").value;
-      let items = document.querySelector("#faultyItems");
-      items.style.visibility = "hidden";
        event.preventDefault();
       formSubmission(document,items,pilotNameInput,copilotNameInput,fuelLevelInput,cargoMassInput);
     });
