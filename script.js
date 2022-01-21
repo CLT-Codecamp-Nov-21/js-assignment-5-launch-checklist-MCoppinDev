@@ -2,11 +2,23 @@
 
 window.addEventListener("load", function () {
   let listedPlanetsResponse = myFetch();
-  listedPlanetsResponse.then(function (json) {
-    
+  listedPlanetsResponse.then(function (result) {
 
-    console.log(json);
+    let listedPlanets = result;
+
+    
+    let planetSelected = pickPlanet(listedPlanets)
+    addDestinationInfo(
+      window.document,
+      planetSelected.name,
+      planetSelected.diameter,
+      planetSelected.star,
+      planetSelected.distance,
+      planetSelected.moons,
+      planetSelected.image
+    )
   });
+  
 
   const form = document.querySelector("form");
 
