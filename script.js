@@ -28,6 +28,7 @@ window.addEventListener("load", function () {
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]").value;
       let cargoMassInput = document.querySelector("input[name=cargoMass]").value;
       let items = document.querySelector("#faultyItems");
+      items.style.visibility = "hidden";
        event.preventDefault();
       formSubmission(document,items,pilotNameInput,copilotNameInput,fuelLevelInput,cargoMassInput);
     });

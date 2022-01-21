@@ -52,7 +52,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
     if (cargoLevel > 10000 && fuelLevel < 10000){
       
-                fuelStatus.innerHTML = "Fuel level is too low for launch";
+                fuelStatus.innerHTML = "Fuel level too low for launch";
 
                 cargoStatus.innerHTML = "Cargo mass too heavy for launch";
 
@@ -64,7 +64,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
       } else if (cargoLevel > 10000) {
 
-        fuelStatus.innerHTML ="Fuel level is high enough for launch"
+        fuelStatus.innerHTML ="Fuel level high enough for launch"
 
         cargoStatus.innerHTML = "Cargo mass too heavy for launch";
 
